@@ -1,3 +1,4 @@
+/* Root container style */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,19 +6,23 @@
   text-align: center;
 }
 
+/* Logo hover effect */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Logo spin animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,16 +32,71 @@
   }
 }
 
+/* Reduced motion for prefers-reduced-motion */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* General card style */
 .card {
   padding: 2em;
 }
 
+/* Styling for the 'Read the docs' section */
 .read-the-docs {
   color: #888;
+}
+
+/* Book container and layout */
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem 0;
+}
+
+/* Individual book card styling */
+.book-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 250px;
+  padding: 1.5rem;
+  margin: 15px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 300ms, box-shadow 300ms;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Book image styling */
+.book-card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Book title, author, and genre styling */
+.book-card-info {
+  margin-top: 10px;
+}
+
+.book-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.book-card-author,
+.book-card-genre {
+  font-size: 14px;
+  color: #555;
 }
